@@ -37,6 +37,12 @@ PRODUCT_PACKAGES += \
     messaging \
     Stk
 
+# Turbo
+PRODUCT_PACKAGES += \
+    Turbo \
+    turbo.xml \
+    privapp-permissions-turbo.xml
+
  # Extra tools
 PRODUCT_PACKAGES += \
     7z \
