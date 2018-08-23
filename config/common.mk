@@ -30,4 +30,5 @@ endif
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/pearl/overlay/common
+    vendor/pearl/overlay/common \
+    vendor/pearl/overlay/themes
