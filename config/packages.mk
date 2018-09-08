@@ -18,11 +18,13 @@ PRODUCT_PACKAGES += \
     LatinIME \
     PixelLauncher \
     Launcher3 \
+    LeanLauncher \
     LiveWallpapers \
     LiveWallpapersPicker \
     messaging \
     WellbeingPrebuilt \
-    WallpaperPickerGoogle
+    WallpaperPickerGoogle \
+    OmniStyle
 
 #ifeq ($(AOSIP_BUILDTYPE), Official)
 #    PRODUCT_PACKAGES += \
@@ -36,8 +38,44 @@ PRODUCT_PACKAGES += \
     Dialer \
     ExactCalculator \
     LatinIME \
+    Launcher3QuickStep \
     messaging \
     Stk
+
+# Omni Poor Man Themes
+PRODUCT_PACKAGES += \
+    DocumentsUITheme \
+    DialerTheme \
+    TelecommTheme
+
+PRODUCT_PACKAGES += \
+    NotificationsDark \
+    NotificationsLight \
+    NotificationsPrimary
+
+PRODUCT_PACKAGES += \
+    AccentSluttyPink \
+    AccentPixel \
+    AccentGoldenShower \
+    AccentDeepOrange \
+    AccentOmni \
+    AccentWhite \
+    AccentTeal \
+    AccentFromHell \
+    AccentBlueMonday \
+    AccentSmokingGreen \
+    AccentDeadRed \
+    AccentRottenOrange \
+    AccentDeepPurple
+
+PRODUCT_PACKAGES += \
+    PrimaryAlmostBlack \
+    PrimaryBlack \
+    PrimaryOmni \
+    PrimaryWhite \
+    PrimaryColdWhite \
+    PrimaryWarmWhite \
+    PrimaryDarkBlue
 
 # Turbo
 PRODUCT_PACKAGES += \
