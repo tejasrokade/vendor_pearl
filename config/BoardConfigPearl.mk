@@ -3,3 +3,5 @@ include vendor/pearl/config/BoardConfigQcom.mk
 endif
 
 include vendor/pearl/config/BoardConfigKernel.mk
+
+include vendor/pearl/config/BoardConfigSoong.mk
