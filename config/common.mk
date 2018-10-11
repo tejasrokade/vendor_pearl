@@ -32,3 +32,6 @@ endif
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/pearl/overlay/common \
     vendor/pearl/overlay/themes
+
+# Bootanimation
+$(call inherit-product, vendor/pearl/config/bootanimation.mk)
