@@ -35,3 +35,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Bootanimation
 $(call inherit-product, vendor/pearl/config/bootanimation.mk)
+
+#World-APN List
+PRODUCT_COPY_FILES += \
+     vendor/pearl/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
