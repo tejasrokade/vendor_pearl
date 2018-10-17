@@ -116,6 +116,13 @@ PRODUCT_PACKAGES += \
     PrimaryWarmWhite \
     PrimaryDarkBlue
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim
+
 # Turbo
 PRODUCT_PACKAGES += \
     Turbo \
