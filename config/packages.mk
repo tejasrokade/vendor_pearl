@@ -20,7 +20,8 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     messaging \
-    WellbeingPrebuilt
+    WellbeingPrebuilt \
+    WallpaperPickerGoogle
 
 #ifeq ($(AOSIP_BUILDTYPE), Official)
 #    PRODUCT_PACKAGES += \
