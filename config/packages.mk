@@ -48,7 +48,9 @@ PRODUCT_PACKAGES += \
 #Themes
 PRODUCT_PACKAGES += \
     BlackThemeAndroidOverlay \
-    BlackThemeSettingsOverlay
+    BlackThemeSettingsOverlay \
+    DarkThemeAndroidOverlay \
+    DarkThemeSettingsOverlay
 
 # Omni Poor Man Themes
 PRODUCT_PACKAGES += \
