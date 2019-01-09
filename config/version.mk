@@ -12,31 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PEARL_MOD_VERSION = 9.0
+PRODUCT_BRAND ?= Pearl
 
- ifeq ($(PEARL_BETA),true)
-    PEARL_BUILD_TYPE := BETA
+# Versioning System
+# Lean version over here.
+PRODUCT_VERSION_MAJOR = v1.0
+PRODUCT_VERSION_MINOR = SparkyWhite
+PEARL_POSTFIX := -$(shell date +"%Y%m%d")
+
+ifndef PEARL_BUILD_TYPE
+    PEARL_BUILD_TYPE := Unofficial
 endif
 
- CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
-
- LIST = $(shell curl -s https://raw.githubusercontent.com/PearlOS/vendor_pearl/pie/pearl.devices)
-FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
-ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
-    IS_OFFICIAL=true
-    PEARL_BUILD_TYPE := OFFICIAL
+ifdef PEARL_BUILD_EXTRA
+    PEARL_POSTFIX := -$(PEARL_BUILD_EXTRA)
+    PEARL_MOD_SHORT := PearlOS-$(PRODUCT_VERSION_MAJOR)-$(PEARL_BUILD)-$(PEARL_BUILD_TYPE)$(PEARL_POSTFIX)
 else
-    PEARL_BUILD_TYPE := UNOFFICIAL
+    PEARL_MOD_SHORT := PearlOS-$(PRODUCT_VERSION_MAJOR)-$(PEARL_BUILD)-$(PEARL_BUILD_TYPE)
 endif
 
- PEARL_VERSION := PEARLOS-$(PEARL_MOD_VERSION)-$(CURRENT_DEVICE)-$(PEARL_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+PEARL_VERSION := PearlOS-$(PRODUCT_VERSION_MAJOR)-$(PEARL_BUILD)-$(PEARL_BUILD_TYPE)$(PEARL_POSTFIX)
 
- PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.pearl.version=$(PEARL_VERSION) \
-  ro.pearl.releasetype=$(PEARL_BUILD_TYPE) \
-  ro.mod.version=$(PEARL_MOD_VERSION)
-
- PEARL_DISPLAY_VERSION := PEARLOS-$(PEARL_MOD_VERSION)-$(PEARL_BUILD_TYPE)
-
- PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.pearl.display.version=$(PEARL_DISPLAY_VERSION)
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
