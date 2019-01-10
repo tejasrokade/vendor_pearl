@@ -45,3 +45,6 @@ include vendor/pearl/config/pearl_props.mk
 
 # Sounds
 include vendor/pearl/config/sounds.mk
+
+#Telephony
+include vendor/pearl/config/telephony.mk

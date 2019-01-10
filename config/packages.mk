@@ -16,7 +16,7 @@
 PRODUCT_PACKAGES += \
     Gallery2 \
     LatinIME \
-    Launcher3 \
+    PixelLauncher \
     LiveWallpapers \
     LiveWallpapersPicker \
     messaging \
@@ -32,9 +32,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Calendar \
+    Dialer \
     ExactCalculator \
     LatinIME \
-    Launcher3QuickStep \
     messaging \
     Stk
 
