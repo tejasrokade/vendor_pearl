@@ -16,7 +16,6 @@
 PRODUCT_PACKAGES += \
     Gallery2 \
     LatinIME \
-    PixelLauncher \
     Launcher3 \
     LeanLauncher \
     LiveWallpapers \
@@ -24,6 +23,7 @@ PRODUCT_PACKAGES += \
     messaging \
     WellbeingPrebuilt \
     WallpaperPickerGoogle \
+    shell \
     OmniStyle
 
 #ifeq ($(AOSIP_BUILDTYPE), Official)
