@@ -26,6 +26,13 @@ ifeq ($(PEARL_ALPHA),true)
     PEARL_BUILD_TYPE := ALPHA
 endif
 
+ifndef PEARL_MAINTAINER
+    PEARL_MAINTAINER := Unknown
+endif
+
+ifndef CPU_MODEL
+    CPU_MODEL := Snapdragon 625
+endif
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 
 ifeq ($(PEARL_OFFICIAL),true)
@@ -51,4 +58,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.pearl.releasetype=$(PEARL_BUILD_TYPE) \
     ro.mod.version=$(PEARL_MOD_VERSION) \
     ro.pearl.display.version=$(PEARL_DISPLAY_VERSION) \
-    ro.pearl.fingerprint=$(ROM_FINGERPRINT)
+    ro.pearl.fingerprint=$(ROM_FINGERPRINT) \
+    ro.pearl.maintainer = $(PEARL_MAINTAINER) \
+    ro.processor.model=$(CPU_MODEL)
